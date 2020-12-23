@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: "UTMNeoSansIntel", sans-serif;
+    font-size: 12px;
+}
+
+body {
+    font-size: 15px;
+    width: 100%;
+    margin: 0px auto;
+    font-family: "UTMNeoSansIntel", sans-serif;
+    font-size: 12px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+
+/* ===================================================== */
+
+.menutop {
+    height: 90px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main_nav a {
+    color: #000;
+    padding: 30px;
+}
+
+.navbar-nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 70px;
+    justify-content: center;
+}
+
+.navbar-nav a {
+    color: #334862;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.menutop li {
+    float: left;
+}
+
+.input-group {
+    width: 13% !important;
+    padding: 10px 30px 5px;
+    border: 1px solid #d6d6d8;
+    border-radius: 25px;
+}
+
+.giohang {
+    width: 50px;
+    height: 100%;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+.giohang img {
+    height: 30px;
+}
+
+.dang-nhap img {
+    height: 20px;
+    padding-left: 10px;
+}
+
+.username {
+    padding-left: 10px;
+    flex: 1;
+}
+
+.banner {
+    height: 650px;
+    width: 100%;
+}
+
+.banner .carousel-inner {
+    height: 650px;
+    width: 100%;
+}
+
+.banner .carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ===================================================== */
+
+.main-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 1000px;
+}
+
+.main .dathang {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+}
+
+.main .dathang .dathang-img img {
+    width: 500px;
+    height: 500px;
+}
+
+.main .dathang .thongtin-sp .gach1 {
+    border-bottom: 1px solid #ddd;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.main .dathang .thongtin-sp .gach2 {
+    border-bottom: 1px solid #ddd;
+}
+
+.main .dathang .thongtin-sp .tittle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #48484a;
+    font-weight: bold;
+}
+
+.main .dathang .thongtin-sp {
+    padding-left: 20px;
+}
+
+.main .dathang .thongtin-sp .gia {
+    font-size: 30px;
+    color: #874546;
+    font-weight: bold;
+}
+
+.main .dathang .thongtin-sp span {
+    font-size: 15px;
+    color: #874546;
+}
+
+.main .dathang .thongtin-sp .text i {
+    font-size: 15px;
+}
+
+.main .dathang .thongtin-sp .muahang-wrap {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.main .dathang .thongtin-sp .muahang-wrap .soluong-btn {
+    border-radius: 20px;
+    border: 1px solid;
+    padding: 5px 10px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.main .dathang .thongtin-sp .muahang-wrap .soluong-btn button {
+    font-size: 16px;
+    background: transparent;
+    padding: 0 10px;
+}
+
+.main .dathang .thongtin-sp .muahang-wrap .soluong-btn input {
+    width: 60px;
+    text-align: center;
+}
+
+.main .dathang .thongtin-sp .muahang-wrap .shopping-btn {
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 40px;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.shopping-btn a {
+    color: #000;
+    font-size: 16px;
+}
+
+.shopping-btn a:hover {
+    color: #000;
+    font-size: 16px;
+}
+
+.main .dathang .thongtin-sp .muahang-wrap .btn-buynow {
+    background: transparent;
+    background: #874546;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 30px 5px;
+    border: 1px solid #d6d6d8;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.btn-buynow a {
+    font-size: 16px;
+    color: #d6d6d8;
+    text-decoration: none;
+}
+
+.btn-buynow a:hover {
+    font-size: 16px;
+    color: #d6d6d8;
+    text-decoration: none;
+}
+
+.main-mota-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+.main-mota-wrap .mota {
+    width: 1000px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-mota-wrap .mota .mota-tittle {
+    padding-top: 10px;
+}
+
+.main-mota-wrap .mota .mota-tittle span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.main-mota-wrap .mota .gach {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.main-mota-wrap .mota .text {
+    font-size: 15px;
+}
+
+.main-mota-wrap .mota .gach3 {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 100px;
+}
+
+.main-mota-wrap .mota .ha {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.main-mota-wrap .mota .mota-image {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* ================================================== */
+
+.footer {
+    width: 100%;
+    text-align: center;
+    color: #48484a;
+    height: 300px;
+    clear: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer-wrap {
+    display: flex;
+}
+
+.footer-item .is-divider {
+    background: black;
+    width: 40px;
+    height: 5px;
+}
+
+.footer-item {
+    padding: 50px 50px;
+}
+
+.footer-item div {
+    text-align: left;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.design {
+    background-color: #f8f8f8;
+    color: #48484A;
+    width: 100%;
+    height: 50px;
+}
+
+.design div {
+    padding: 18px 100px;
+    text-align: center;
+}
