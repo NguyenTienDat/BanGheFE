@@ -14,8 +14,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../../common/css/common.css">
     <script src="../../js/apis.js"></script>
     <script src="../../js/support.js"></script>
+
+    <script src="../giohang/giohang.js"></script>
 
     <script src="./sanpham.js"></script>
 
@@ -160,66 +164,66 @@
                             <input type="text" id="input-quantity" value="1" min="1" data-id="Quantity" aria-label="quantity" pattern="[0-9]*" name="quantity" id="Quantity">
                             <button type="button" class="tangsl" onclick="thayDoiSoLuong(1)">+</button>
                         </div>
-                        <div class="shopping-btn"><a href="../giohang/Giohang.html"><i class="fa fa-shopping-cart"></i></a></div>
-                        <button class="btn-buynow"><a href="../thanhtoan/Thanhtoan.html"> MUA NGAY</a></button>
-
-                    </div>
-                </div>
+                        <div class="shopping-btn"><span class="cursor-pointer" onclick="addToCart()"><i class="fa fa-shopping-cart"></i></span></div>
+                <button class="btn-buynow"> MUA NGAY</button>
             </div>
         </div>
     </div>
+    </div>
+    </div>
+
     <div class="main-mota-wrap">
-                <div class="mota">
-                    <p class="mota-tittle"><span> MÔ TẢ </span></p>
-                    <div>
-                        <div class="gach"></div>
-                    </div>
-                    <p class="mota-tittle" id="label-name-des"><span></span></p>
-                    <p class="text" id="label-des"></p>
-
-                    <div>
-                        <div class="gach3"></div>
-                    </div>
-                </div>
+        <div class="mota">
+            <p class="mota-tittle"><span> MÔ TẢ </span></p>
+            <div>
+                <div class="gach"></div>
             </div>
-            <div class="footer">
-                <div class="footer-wrap">
-                    <div class="footer-item">
-                        <div> THÔNG TIN LIÊN HỆ</div>
-                        <div class="is-divider small"></div>
-                        <div>Địa chỉ : 235 Hoàng Quốc Việt , Cổ Nhuế 1 , Bắc Từ Liêm , Hà Nội</div>
-                        <div>Hotline : 0336571245</div>
-                        <div>Email : decor1409@gmail.com</div>
-                    </div>
+            <p class="mota-tittle" id="label-name-des"><span></span></p>
+            <p class="text" id="label-des"></p>
 
-                    <div class="footer-item">
-                        <div>THÔNG TIN</div>
-                        <div class="is-divider small"></div>
-                        <div>Tìm kiếm</div>
-                        <div>Giới thiệu</div>
-                        <div>Chính sách thanh toán</div>
-                        <div>Chính sách vận chuyển</div>
-                        <div>Chính sách bảo hành</div>
-                    </div>
-
-                    <div class="footer-item">
-                        <div>LIÊN KẾT</div>
-                        <div class="is-divider small"></div>
-                        <div>Sản phẩm khuyến mãi</div>
-                        <div>Sản phẩm nổi bật</div>
-                        <div>Tất cả sản phẩm</div>
-
-                    </div>
-
-                    <div class="footer-item">
-                        <div>KẾT NỐI VỚI CHÚNG TÔI</div>
-                        <div class="is-divider small"></div>
-                    </div>
-                </div>
+            <div>
+                <div class="gach3"></div>
             </div>
-            <div class="design">
-                <div> Copyright 2020 © DECOR . Design by Huong </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-wrap">
+            <div class="footer-item">
+                <div> THÔNG TIN LIÊN HỆ</div>
+                <div class="is-divider small"></div>
+                <div>Địa chỉ : 235 Hoàng Quốc Việt , Cổ Nhuế 1 , Bắc Từ Liêm , Hà Nội</div>
+                <div>Hotline : 0336571245</div>
+                <div>Email : decor1409@gmail.com</div>
             </div>
+
+            <div class="footer-item">
+                <div>THÔNG TIN</div>
+                <div class="is-divider small"></div>
+                <div>Tìm kiếm</div>
+                <div>Giới thiệu</div>
+                <div>Chính sách thanh toán</div>
+                <div>Chính sách vận chuyển</div>
+                <div>Chính sách bảo hành</div>
+            </div>
+
+            <div class="footer-item">
+                <div>LIÊN KẾT</div>
+                <div class="is-divider small"></div>
+                <div>Sản phẩm khuyến mãi</div>
+                <div>Sản phẩm nổi bật</div>
+                <div>Tất cả sản phẩm</div>
+
+            </div>
+
+            <div class="footer-item">
+                <div>KẾT NỐI VỚI CHÚNG TÔI</div>
+                <div class="is-divider small"></div>
+            </div>
+        </div>
+    </div>
+    <div class="design">
+        <div> Copyright 2020 © DECOR . Design by Huong </div>
+    </div>
 </body>
 
 </html>

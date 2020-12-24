@@ -30,4 +30,27 @@ function getProduct() {
     });
 }
 
+function addToCart() {
+    const productId = getParamsFromURL("product-id") || 1;
+    const sl = +($('#input-quantity').val()) || 0;
+    let username = getUser('username');
+    if (!username) {
+        setUser({ username: `Guest${Date.now()}` });
+        username = getUser('username');
+    }
+    const body = {
+        "product_id": +productId,
+        "username": username,
+        "quantity": sl
+    }
+    postData(`cart/index.php`, body, null, true, (e) => {
+        if (e && e.message == 'success') {
+            saveCartStorage(body);
+            redirectPage('../giohang/giohang.html');
+        }
+    }, (req) => {
+        alert('ERROR!');
+    });
+}
+
 getProduct();
