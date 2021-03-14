@@ -8,6 +8,12 @@ function redirectPage(page, target = '_self') {
 
 function getUser(field) {
     const user = JSON.parse(localStorage.getItem('USER'));
+
+    if (!user) {
+        setUser({ username: `Guest${Date.now()}` });
+        username = getUser('username');
+    }
+
     if (user) {
         $('#usernameLabel').text(user.username)
     } else {
@@ -16,6 +22,7 @@ function getUser(field) {
     if (field) {
         return user && user[field];
     }
+    return user;
 }
 
 function setUser(user) {
@@ -25,4 +32,22 @@ function setUser(user) {
 function getParamsFromURL(param) {
     const url = new URL(window.location.href);
     return url.searchParams.get(param);
+}
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function updatedUIChangeQuantity(input, num) {
+    const sl = +($(input).val()) || 0;
+    if (sl <= 1 && num == -1) {
+        return;
+    }
+    let quantity = num + sl;
+    $(input).val(quantity);
+}
+
+function logout(page) {
+    localStorage.clear();
+    redirectPage(page);
 }

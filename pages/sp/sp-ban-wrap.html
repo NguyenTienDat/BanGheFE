@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Đăng nhập</title>
-    <link rel="stylesheet" href="Dangnhap.css">
-    <meta http-equiv="refresh" content="10000">
+    <title>SP BÀN WRAP</title>
+    <link rel="stylesheet" href="sp-ghe-wrap.css">
+    <meta http-equiv="refresh" content="100000">
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,11 +13,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/apis.js"></script>
+    <script src="../js/support.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+    <!-- NEEDCODE =========================================== -->
     <script src="../../js/apis.js" type="text/javascript"></script>
     <script src="../../js/support.js" type="text/javascript"></script>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <script src="../sp/sp-ban-wrap.js" type="text/javascript"></script>
     <style>
         /* Make the image fully responsive */
         
@@ -83,6 +93,7 @@
                 </ul>
 
             </div>
+
         </nav>
         <div class="input-group">
             <input type="text" value="" placeholder="Tìm kiếm..." name="q">
@@ -92,16 +103,14 @@
             </span>
         </div>
         <div class="dang-nhap">
-            <a href="Dangnhap.html"><img src="https://cdn.onlinewebfonts.com/svg/img_568657.png"></a>
+            <a href="../Dangnhap/Dangnhap.html" target="_parent"><img src="https://cdn.onlinewebfonts.com/svg/img_568657.png"></a>
         </div>
         <div class="giohang">
-            <a href="../giohang/Giohang.html" target=""><img src="https://previews.123rf.com/images/val2014/val20141603/val2014160300005/54302312-shopping-cart-icon.jpg" alt="Giỏ hàng"></a>
+            <a href="../giohang/Giohang.html" target="_parent"><img src="https://previews.123rf.com/images/val2014/val20141603/val2014160300005/54302312-shopping-cart-icon.jpg" alt="Giỏ hàng"></a>
         </div>
-        <div class="username" id=""></div>
+        <div class="username" id="usernameLabel"></div>
     </div>
     <div class="banner">
-
-
         <div id="demo" class="carousel slide" data-ride="carousel">
 
             <!-- Indicators -->
@@ -133,21 +142,17 @@
             </a>
         </div>
     </div>
-    <div class="main-wrap">
+    <div class="wrap-main">
         <div class="main">
-            <p class="tittle"> ĐĂNG NHẬP </p>
-            <div>
-                <p><input class="text" type="text" placeholder="Tên đăng nhập" required id="username"></p>
-
-                <p><input class="text" type="text" placeholder="Mật khẩu" required id="pass"></p>
-
-                <p><button class="btn-send" onclick="login()">ĐĂNG NHẬP</button></p>
+            <div class="title-wrap">
+                <div class="title">BÀN</div>
             </div>
-            <div class="dangki"><a href="../Dangki/Dangki.html"> ĐĂNG KÍ </a</div>
-            <div class="dangki"><a href="../trangchu/Trangchu.html"> Trở về</a</div>
-        </div>  
+            <div id="dsGheNgoi">
+
+            </div>
+        </div>
     </div>
-     <div class="footer">
+    <div class="footer">
         <div class="footer-wrap">
             <div class="footer-item">
                 <div> THÔNG TIN LIÊN HỆ</div>
@@ -186,5 +191,5 @@
         <div> Copyright 2020 © DECOR . Design by Huong </div>
     </div>
 </body>
-<script src="./dangnhap.js"></script>
+
 </html>

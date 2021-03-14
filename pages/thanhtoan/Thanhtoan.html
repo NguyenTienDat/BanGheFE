@@ -17,6 +17,11 @@
     <script src="../js/support.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="../../common/css/common.css">
+    <script src="../../js/apis.js"></script>
+    <script src="../../js/support.js"></script>
+    <script src="../thanhtoan/thanhtoan.js"></script>
+
     <style>
         /* Make the image fully responsive */
         
@@ -62,7 +67,7 @@
             </span>
         </div>
         <div class="dang-nhap">
-            <a href="../pages/Dangnhap/Dangnhap.html " target="_parent"><img src="https://cdn.onlinewebfonts.com/svg/img_568657.png"></a>
+            <a href="../Dangnhap/Dangnhap.html " target="_parent"><img src="https://cdn.onlinewebfonts.com/svg/img_568657.png"></a>
         </div>
         <div class="giohang">
             <a href="../giohang/Giohang.html" target="_parent"><img src="https://previews.123rf.com/images/val2014/val20141603/val2014160300005/54302312-shopping-cart-icon.jpg" alt="Giỏ hàng"></a>
@@ -87,7 +92,7 @@
                     <img src="https://theme.hstatic.net/1000341603/1000435197/14/main_slider_4.png?v=602" alt="">
                 </div>
                 <div class="carousel-item">
-                    <img src="../Images/hinh-nen-noi-that-dep-full-hd-so-10-0-1.jpg" alt="">
+                    <img src="../../Images/hinh-nen-noi-that-dep-full-hd-so-10-0-1.jpg" alt="">
                 </div>
                 <div class="carousel-item">
                     <img src="https://theme.hstatic.net/1000341603/1000435197/14/main_slider_2.png?v=602" alt="">
@@ -107,46 +112,26 @@
         <div class="main">
             <div class="contact" id="contact">
                 <h1>THANH TOÁN</h1><br>
-                <div class="xacnhan">
-                    <div class="xn-wrap">
-                        <p class="xn"> Tên sản phẩm : </p>
-                        <p class="xn"><i> Ghế ăn ghế cafe Eames mặt nhựa lỗ chân sắt đan DSR </i></p>
-                    </div>
-                    <div class="xn-wrap">
-                        <p class="xn"> Số lượng : </p>
-                        <p class="xn"><i> 1 </i></p>
-                    </div>
-                    <div class="xn-wrap">
-                        <p class="xn"> Tạm tính : </p>
-                        <p class="xn"><i> 580.000đ </i></p>
-                    </div>
-                    <div class="xn-wrap">
-                        <p class="xn"> Phí ship : </p>
-                        <p class="xn"><i> 50,000đ </i></p>
-                    </div>
-                    <div>
-                        <div class="gach1"></div>
-                    </div>
-                    <div class="xn-wrap">
-                        <p class="xn"> Tổng tiền : </p>
-                        <p class="xn"><i> 630,000đ</i></p>
-                    </div>
+                <div id="mat-hang">
+
                 </div>
                 <div>
                     <div class="gach2"></div>
                 </div>
-                <p class="nd">Bạn đã có tài khoản ? <a href="../pages/Dangnhap/Dangnhap.html"> Đăng nhập </a> </p>
-                <form action="/action_page.php" target="_blank">
-                    <p><input class="text" type="text" placeholder="Họ và Tên" required name="Hoten"></p>
+                <div id="thongtin-don-hang">
+                    <p class="nd">Bạn đã có tài khoản ? <a href="../Dangnhap/Dangnhap.html"> Đăng nhập </a> </p>
+                    <div>
+                        <p><input class="text" type="text" placeholder="Họ và Tên" required name="Hoten"></p>
 
-                    <p><input class="text" type="text" placeholder="Email" required name="Email"></p>
+                        <p><input class="text" type="text" placeholder="Email" required name="Email"></p>
 
-                    <p><input class="text" type="text" placeholder="Số Điện Thoại" required name="SDT"></p>
+                        <p><input class="text" type="text" placeholder="Số Điện Thoại" required name="SDT"></p>
 
-                    <p><input class="text" type="text" placeholder="Địa chỉ" required name="Noidung"></p>
+                        <p><input class="text" type="text" placeholder="Địa chỉ" required name="Noidung"></p>
 
-                    <p><button class="btn-send" type="submit">THANH TOÁN</button></p>
-                </form>
+                        <p><button class="btn-send" onclick="thanhToan()">THANH TOÁN</button></p>
+                    </div>
+                </div>
             </div>
             <div class="img">
                 <img src="https://theme.hstatic.net/1000341603/1000435197/14/contact_top.jpg?v=606">

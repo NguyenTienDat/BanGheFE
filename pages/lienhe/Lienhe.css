@@ -72,7 +72,7 @@ a {
 }
 
 .giohang {
-    flex: 1;
+    width: 50px;
     height: 100%;
     padding-top: 30px;
     padding-left: 10px;
@@ -87,7 +87,8 @@ a {
     padding-left: 10px;
 }
 
-.logout {
+.username {
+    padding-left: 10px;
     flex: 1;
 }
 
@@ -107,7 +108,7 @@ a {
 }
 
 
-/* ===================================================== */
+/* ================================================== */
 
 .main-wrap {
     width: 100%;
@@ -117,131 +118,40 @@ a {
 }
 
 .main {
-    width: 1200px;
-    display: flex;
-    border: 1px solid #d6d6d8;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    justify-content: center;
-}
-
-.main .donhang .tittle {
-    font-size: 25px;
-    font-weight: bold;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-}
-
-.main .donhang .sp {
-    display: flex;
-    align-items: center;
     width: 1000px;
-    height: 200px;
-}
-
-.main .donhang .text {
-    font-size: 15px;
-    padding-left: 30px;
-    flex: auto;
-    font-weight: bold;
-    text-align: end;
-}
-
-.main .donhang .text5 {
-    font-size: 15px;
-    padding-left: 30px;
-    color: #874546;
-    flex: auto;
-    font-weight: bold;
-}
-
-.main i {
-    font-size: 15px;
-}
-
-.main .text1 {
-    font-size: 15px;
-    padding-left: 100px;
-    flex: auto;
-    font-weight: bold;
-    text-align: end;
-}
-
-.main .donhang .gach {
-    border-bottom: 1px solid #ddd;
-    margin-top: 20px;
-}
-
-.main .donhang .ten .text2 {
-    font-size: 15px;
-    padding-left: 270px;
-    flex: auto;
-    font-weight: bold;
-    text-align: -webkit-center;
-}
-
-.main .donhang .text3 {
-    font-size: 17px;
-    padding-left: 600px;
-    flex: auto;
-    font-weight: bold;
-    padding-top: 15px;
-    text-align: end;
-}
-
-.main .tam-tinh {
-    display: flex;
-}
-
-.main .text4 {
-    font-size: 17px;
-    padding-left: 100px;
-    flex: auto;
-    font-weight: bold;
-    padding-top: 30px;
-}
-
-.main .donhang .ten {
-    display: flex;
-}
-
-.main .donhang .text i {
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.main .donhang .giohang-img {
-    padding-left: 50px;
-}
-
-.main .dathang .thongtin-sp .muahang-wrap {
-    display: flex;
-    align-items: center;
-    padding-top: 30px;
-    font-size: 20px;
-}
-
-.main .muahang-wrap .soluong-btn {
-    border-radius: 20px;
-    border: 1px solid;
-    padding: 5px 10px;
-    width: 120px;
-    display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 50px;
 }
 
-.main .muahang-wrap .soluong-btn button {
-    font-size: 16px;
-    background: transparent;
-    padding: 0 10px;
-}
-
-.main .muahang-wrap .soluong-btn input {
-    width: 60px;
+.main .thongtin-img {
     text-align: center;
+    padding-bottom: 50px;
+}
+
+.main .contact {
+    padding-top: 50px;
+}
+
+.main .contact .nd {
+    font-size: 15px;
+}
+
+.main .contact .diachi {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.main .contact .gach {
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.main .contact .text {
+    padding-top: 10px;
+    font-size: 15px;
+    width: 1000px;
+    outline: none;
 }
 
 .btn-send {
@@ -255,17 +165,11 @@ a {
     margin-bottom: 40px;
     margin-top: 20px;
     font-weight: bold;
-    margin-top: 30px;
 }
 
 .btn-send:hover {
     background: none;
     color: black;
-}
-
-.main .button {
-    display: flex;
-    justify-content: space-between;
 }
 
 .btn-send a {

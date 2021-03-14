@@ -160,12 +160,12 @@
                     <div class="muahang-wrap">
                         SỐ LƯỢNG 
                         <div class="soluong-btn">
-                            <button type="button" class="giamsl" onclick="thayDoiSoLuong(-1)">-</button>
+                            <button type="button" class="giamsl" onclick="updatedUIChangeQuantity('#input-quantity', -1)">-</button>
                             <input type="text" id="input-quantity" value="1" min="1" data-id="Quantity" aria-label="quantity" pattern="[0-9]*" name="quantity" id="Quantity">
-                            <button type="button" class="tangsl" onclick="thayDoiSoLuong(1)">+</button>
+                            <button type="button" class="tangsl" onclick="updatedUIChangeQuantity('#input-quantity', 1)">+</button>
                         </div>
                         <div class="shopping-btn"><span class="cursor-pointer" onclick="addToCart()"><i class="fa fa-shopping-cart"></i></span></div>
-                <button class="btn-buynow"> MUA NGAY</button>
+                <button class="btn-buynow" onclick="addToCart(true)"> MUA NGAY</button>
             </div>
         </div>
     </div>

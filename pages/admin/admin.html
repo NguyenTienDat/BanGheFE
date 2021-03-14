@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>admin</title>
-    <!-- <link rel="stylesheet" href= "admin.css"> -->
+    <!-- <link rel="stylesheet" href="admin.css"> -->
     <meta http-equiv="refresh" content="1000">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -171,7 +171,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">SỐ NGƯỜI DÙNG</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">7</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-user-plus fa-2x text-gray-300"></i>
@@ -248,21 +248,174 @@
                 </div>
                 <!-- /.container-fluid -->
 
-            </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Ngdhg 2020 </span>
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">DANH SÁCH ĐƠN HÀNG</font>
+                            </font>
+                        </h6>
                     </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6">
+                                        <div id="dataTable_filter" class="dataTables_filter"><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tìm kiếm:</font></font><input type="search" class="form-control form-control-sm" placeholder="" aria-controls="dataTable"></label></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+                                            <thead>
+                                                <tr role="row">
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Tên: kích hoạt để sắp xếp cột giảm dần" style="width: 133px;">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">HỌ VÀ TÊN KHÁCH HÀNG</font>
+                                                        </font>
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Vị trí: kích hoạt để sắp xếp cột tăng dần" style="width: 208px;">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">SỐ ĐIỆN THOẠI</font>
+                                                        </font>
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: kích hoạt để sắp xếp cột tăng dần" style="width: 94px;">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">TỔNG TIỀN HÓA ĐƠN</font>
+                                                        </font>
+                                                    </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Tuổi: kích hoạt để sắp xếp cột tăng dần" style="width: 69px;">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">NGÀY LẬP HÓA ĐƠN</font>
+                                                        </font>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th rowspan="1" colspan="1">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">DOANH THU</font>
+                                                        </font>
+                                                    </th>
+                                                    <th rowspan="1" colspan="1">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;"></font>
+                                                        </font>
 
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+
+                                                <tr role="row" class="odd">
+                                                    <td class="sorting_1">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">A</font>
+                                                        </font>
+                                                    </td>
+                                                    <td>
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">B</font>
+                                                        </font>
+                                                    </td>
+                                                    <td>
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">C</font>
+                                                        </font>
+                                                    </td>
+                                                    <td>
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">D</font>
+                                                        </font>
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-5">
+                                        <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;"></font>
+                                            </font>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-7">
+                                        <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+                                            <ul class="pagination">
+                                                <li class="paginate_button page-item previous disabled" id="dataTable_previous">
+                                                    <a href="#" aria-controls="dataTable" data-dt-idx="0" tabindex="0" class="page-link">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">Trước</font>
+                                                        </font>
+                                                    </a>
+                                                </li>
+                                                <li class="paginate_button page-item active">
+                                                    <a href="#" aria-controls="dataTable" data-dt-idx="1" tabindex="0" class="page-link">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">1</font>
+                                                        </font>
+                                                    </a>
+                                                </li>
+                                                <li class="paginate_button page-item ">
+                                                    <a href="#" aria-controls="dataTable" data-dt-idx="2" tabindex="0" class="page-link">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">2</font>
+                                                        </font>
+                                                    </a>
+                                                </li>
+                                                <li class="paginate_button page-item ">
+                                                    <a href="#" aria-controls="dataTable" data-dt-idx="3" tabindex="0" class="page-link">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">3</font>
+                                                        </font>
+                                                    </a>
+                                                </li>
+                                                <li class="paginate_button page-item ">
+                                                    <a href="#" aria-controls="dataTable" data-dt-idx="4" tabindex="0" class="page-link">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">...</font>
+                                                        </font>
+                                                    </a>
+                                                </li>
+
+                                                <li class="paginate_button page-item next" id="dataTable_next">
+                                                    <a href="#" aria-controls="dataTable" data-dt-idx="7" tabindex="0" class="page-link">
+                                                        <font style="vertical-align: inherit;">
+                                                            <font style="vertical-align: inherit;">Kế tiếp</font>
+                                                        </font>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div id="date"> TỪ NGÀY <input type="date"> ĐẾN NGÀY <input type="date"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
         </div>
-        <!-- End of Content Wrapper -->
+        <!-- End of Main Content -->
+    </div>
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Ngdhg 2020 </span>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->

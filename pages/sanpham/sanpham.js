@@ -1,13 +1,3 @@
-function thayDoiSoLuong(num) {
-    console.log(num)
-    const sl = +($('#input-quantity').val()) || 0;
-    if (sl <= 1 && num == -1) {
-        return;
-    }
-    $('#input-quantity').val(num + sl);
-}
-
-
 function getProduct() {
     const url_string = window.location.href;
     const url = new URL(url_string);
@@ -30,26 +20,41 @@ function getProduct() {
     });
 }
 
-function addToCart() {
+function addToCart(isBuyNow) {
     const productId = getParamsFromURL("product-id") || 1;
-    const sl = +($('#input-quantity').val()) || 0;
     let username = getUser('username');
-    if (!username) {
-        setUser({ username: `Guest${Date.now()}` });
-        username = getUser('username');
-    }
-    const body = {
+
+    const quantity = +($('#input-quantity').val()) || 0;
+
+    let body = {
         "product_id": +productId,
         "username": username,
-        "quantity": sl
+        "quantity": quantity,
+        "Ngay": new Date().toISOString().slice(0, 10).replace('T', ' ')
     }
-    postData(`cart/index.php`, body, null, true, (e) => {
-        if (e && e.message == 'success') {
-            saveCartStorage(body);
-            redirectPage('../giohang/giohang.html');
+    getData('cart/index.php', body, true, e => {
+        if (e && e.data && e.data.length > 0) { // edit
+            body = e.data[0];
+
+            body.quantity = +(e.data[0].quantity) + quantity;
+            putData(`cart/index.php`, body, { id: body.id }, true, (e) => {
+                if (e && e.message == 'success') {
+                    redirectPage(isBuyNow ? '../thanhtoan/Thanhtoan.html' : '../giohang/giohang.html');
+                }
+            }, (req) => {
+                if (failCallBack) { failCallBack(); }
+            });
+        } else { // add
+            postData(`cart/index.php`, body, null, true, (e) => {
+                if (e && e.message == 'success') {
+                    redirectPage(isBuyNow ? '../thanhtoan/Thanhtoan.html' : '../giohang/giohang.html');
+                }
+            }, (req) => {
+                if (failCallBack) { failCallBack(); }
+            });
         }
     }, (req) => {
-        alert('ERROR!');
+        alert("ERROR!");
     });
 }
 

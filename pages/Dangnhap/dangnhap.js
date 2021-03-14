@@ -6,11 +6,18 @@ function login() {
         console.log(e);
         localStorage.setItem('USER', JSON.stringify(data));
 
-        if (e.data.type == 1) {
-            redirectPage('../admin/admin.html');
-        } else {
-            redirectPage('../../trangchu/Trangchu.html')
-        }
+        getData('user', { username: username }, true, res => {
+            if (res && res.data) {
+                localStorage.setItem('USER', JSON.stringify(res.data));
+
+                if (e.data.type == 1) {
+                    redirectPage('../admin/admin.html');
+                } else {
+                    redirectPage('../trangchu/Trangchu.html')
+                }
+            }
+        });
+
     }, (req) => {
         alert(req.responseJSON.message);
     });
