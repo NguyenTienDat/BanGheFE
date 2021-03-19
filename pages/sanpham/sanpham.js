@@ -25,12 +25,10 @@ function addToCart(isBuyNow) {
     let username = getUser('username');
 
     const quantity = +($('#input-quantity').val()) || 0;
-
     let body = {
         "product_id": +productId,
-        "username": username,
         "quantity": quantity,
-        "Ngay": new Date().toISOString().slice(0, 10).replace('T', ' ')
+        "username": username
     }
     getData('cart/index.php', body, true, e => {
         if (e && e.data && e.data.length > 0) { // edit
@@ -54,7 +52,8 @@ function addToCart(isBuyNow) {
             });
         }
     }, (req) => {
-        alert("ERROR!");
+        console.log(req);
+        alert("ERROR!", JSON.stringify(req));
     });
 }
 
