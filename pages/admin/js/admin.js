@@ -7,6 +7,7 @@ function getBill(from, to) {
     getData(`bill/index.php`, params, true, (e) => {
 
         if (e && e.message == 'success') {
+            $('#count-bill').html(e.data.length);
             let ls = ''
             console.log(e);
             for (let i = 0; i < e.data.length; i++) {
@@ -51,7 +52,6 @@ function getBill(from, to) {
     });
 }
 
-
 function changeQuantityCart(input, num, productId) {
     updatedUIChangeQuantity(input, num);
     let username = getUser('username');
@@ -80,4 +80,19 @@ function changeQuantityCart(input, num, productId) {
         });
     }, 500);
 }
+
+function getCount() {
+    getData(`user/index.php`, null, true, (e) => {
+        if (e && e.message == 'success') {
+            $('#count-user').html(e.data.length);
+        }
+    });
+
+    getData(`product/index.php`, null, true, (e) => {
+        if (e && e.message == 'success') {
+            $('#count-product').html(e.data.length);
+        }
+    });
+}
+getCount();
 getBill();
