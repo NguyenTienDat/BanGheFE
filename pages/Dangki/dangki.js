@@ -14,7 +14,7 @@ function signup() {
 
         if (e && e.message == "success") {
             localStorage.setItem('USER', JSON.stringify(data));
-            redirectPage('../../trangchu/Trangchu.html');
+            redirectPage('../trangchu/Trangchu.html');
         } else {
             alert("Username này đã tồn tại !");
         }

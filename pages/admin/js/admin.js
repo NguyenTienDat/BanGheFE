@@ -1,3 +1,9 @@
+let LIST = [];
+let LIST_DISPLAY = [];
+const PAGE_SIZE = 2;
+let TOTAL_PAGE = 1;
+let CURRENT_PAGE = 1;
+
 function getBill(from, to) {
     const params = {};
     if (from && to) {
@@ -8,48 +14,58 @@ function getBill(from, to) {
 
         if (e && e.message == 'success') {
             $('#count-bill').html(e.data.length);
-            let ls = ''
+
             console.log(e);
-            for (let i = 0; i < e.data.length; i++) {
-
-                const item = e.data[i];
-                ls += `
-                
-                <tr role="row" class="odd">
-                <td class="sorting_1">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">${item.name}</font>
-                    </font>
-                </td>
-                <td>
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">${item.sdt}</font>
-                    </font>
-                </td>
-                <td>
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">${item.Tongtien}</font>
-                    </font>
-                </td>
-                <td>
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">${item.Ngay}</font>
-                    </font>
-                </td>
-
-            </tr>
-
-                `;
-            }
-
-            // $('#tam-tinh-tien').html(numberWithCommas(tamTinh) + 'đ');
-            // $('#tong-tien').html(numberWithCommas(tamTinh) + 'đ');
-
-            $('#bill-list').html(ls);
+            LIST = JSON.parse(JSON.stringify(e.data));
+            renderList(e.data);
         }
     }, (req) => {
         alert("ERROR!");
     });
+}
+
+function renderList(list) {
+    let ls = ''
+    let doanhThu = 0;
+    for (let i = 0; i < list.length; i++) {
+        const item = list[i];
+        doanhThu += item.Tongtien || 0;
+        ls += `
+        
+        <tr role="row" class="odd">
+            <td class="sorting_1">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">${item.name}</font>
+                </font>
+            </td>
+            <td>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">${item.sdt}</font>
+                </font>
+            </td>
+            <td>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">${item.Tongtien}</font>
+                </font>
+            </td>
+            <td>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">${item.Ngay}</font>
+                </font>
+            </td>
+
+        </tr>
+
+        `;
+    }
+
+    // $('#tam-tinh-tien').html(numberWithCommas(tamTinh) + 'đ');
+    // $('#tong-tien').html(numberWithCommas(tamTinh) + 'đ');
+
+    $('#bill-list').html(ls);
+    $('#doanhthu-id').html(doanhThu);
+
+    addPagination(list);
 }
 
 function changeQuantityCart(input, num, productId) {
@@ -93,6 +109,64 @@ function getCount() {
             $('#count-product').html(e.data.length);
         }
     });
+}
+
+
+function filter() {
+    const fromDate = $('#from-date').val();
+    const toDate = $('#to-date').val();
+
+    LIST_DISPLAY = JSON.parse(JSON.stringify(LIST));
+    const search = $('#search-input').val().trim().toLowerCase();
+    LIST_DISPLAY = LIST_DISPLAY.filter(item => item.name.toLowerCase().includes(search) || item.sdt.includes(search));
+
+    if (new Date(fromDate).getTime() > new Date(toDate).getTime()) {
+        alert('Vui lòng nhập ngày đến lớn hơn ngày bắt đầu!');
+        return;
+    }
+    if (fromDate) {
+        console.log('Filter from date', fromDate);
+        LIST_DISPLAY = LIST_DISPLAY.filter(item => new Date(item.Ngay).getTime() >= new Date(fromDate).getTime());
+    }
+    if (toDate) {
+        console.log('Filter to date', toDate);
+        LIST_DISPLAY = LIST_DISPLAY.filter(item => new Date(item.Ngay).getTime() <= new Date(toDate).getTime());
+    }
+    renderList(LIST_DISPLAY);
+}
+
+function addPagination(list) {
+    TOTAL_PAGE = Math.ceil(list.length / PAGE_SIZE);
+    let lsPage = ``;
+    for (let index = 1; index <= TOTAL_PAGE; index++) {
+        lsPage += `
+        <li class="paginate_button page-item ${index == CURRENT_PAGE ? 'active' : ''}" onclick="changeSize(${index})">
+            <a aria-controls="dataTable" data-dt-idx="1" tabindex="0" class="page-link">
+            ${index}
+            </a>
+        </li>
+        `
+    }
+    const html = `
+    <li class="paginate_button page-item previous disabled" id="dataTable_previous">
+        <a aria-controls="dataTable" data-dt-idx="0" tabindex="0" class="page-link">
+            Trước
+        </a>
+    </li>
+    ${lsPage}
+    <li class="paginate_button page-item next" id="dataTable_next">
+        <a aria-controls="dataTable" data-dt-idx="7" tabindex="0" class="page-link">
+            Kế tiếp
+        </a>
+    </li>`;
+
+    $('#pagination-ul').html(html);
+}
+
+function changeSize(pageIndex) {
+    CURRENT_PAGE = pageIndex;
+    console.log(pageIndex);
+
 }
 getCount();
 getBill();
