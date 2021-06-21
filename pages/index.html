@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chu</title>
+    <link rel="stylesheet" href="index.css">
+    <meta http-equiv="refresh" content="100000">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/apis.js"></script>
+    <script src="../js/support.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Make the image fully responsive */
+        
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+        /* ============ only desktop view ============ */
+        
+        @media all and (min-width: 992px) {
+            .navbar .nav-item .dropdown-menu {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                transition: .3s;
+                margin-top: 0;
+            }
+            .navbar .nav-item:hover .nav-link {
+                color: #fff;
+            }
+            .navbar .dropdown-menu.fade-down {
+                top: 80%;
+                transform: rotateX(-75deg);
+                transform-origin: 0% 0%;
+            }
+            .navbar .dropdown-menu.fade-up {
+                top: 180%;
+            }
+            .navbar .nav-item:hover .dropdown-menu {
+                transition: .3s;
+                opacity: 1;
+                visibility: visible;
+                top: 100%;
+                transform: rotateX(0deg);
+            }
+            /* ============ desktop view .end// ============ */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menutop">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="padding-left: 370px;">
+            <a class="navbar-brand" href="#">Brand</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main_nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"> <a class="nav-link" href="index.html">TRANG CHỦ </a> </li>
+                    <li class="nav-item"><a class="nav-link" href="../gioithieu/Gioithieu.html"> GIỚI THIỆU </a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  SẢN PHẨM  </a>
+                        <ul class="dropdown-menu fade-up">
+                            <li><a class="dropdown-item" href="../sp/sp-ghe-wrap.html"> GHẾ NGỒI </a></li>
+                            <li><a class="dropdown-item" href="../sp/sp-ban-wrap.html"> BÀN </a></li>
+                            <li><a class="dropdown-item" href="../sp/sp-sofa-wrap.html"> GHẾ SOFA </a></li>
+                            <li><a class="dropdown-item" href="../sp/sp-bantra-wrap.html"> BÀN TRÀ </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../lienhe/Lienhe.html"> LIÊN HỆ </a></li>
+                    <li class="nav-item"><a class="nav-link" href="../blog/Blog.html"> BLOG </a></li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <div class="input-group">
+            <input type="text" value="" placeholder="Tìm kiếm..." name="q">
+            <input type="hidden" value="product" name="type">
+            <span class="input-group-btn">
+                <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </span>
+        </div>
+        <div class="dang-nhap">
+            <a href="../Dangnhap/Dangnhap.html" target="_parent"><img src="https://cdn.onlinewebfonts.com/svg/img_568657.png"></a>
+        </div>
+        <div class="giohang">
+            <a href="../giohang/Giohang.html" target="_parent"><img src="https://previews.123rf.com/images/val2014/val20141603/val2014160300005/54302312-shopping-cart-icon.jpg" alt="Giỏ hàng"></a>
+        </div>
+        <div class="username" id="usernameLabel"></div>
+    </div>
+    <div class="banner">
+
+
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://theme.hstatic.net/1000341603/1000435197/14/main_slider_4.png?v=602" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../Images/hinh-nen-noi-that-dep-full-hd-so-10-0-1.jpg" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://theme.hstatic.net/1000341603/1000435197/14/main_slider_2.png?v=602" alt="">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="wrap-main">
+        <div class="main">
+            <div class="menu-top">
+                <div class="menu-item">
+                    <a href="../sp/sp-ghe-wrap.html"><img class="menu-item-img" src="https://theme.hstatic.net/1000341603/1000435197/14/collection_2.png?v=602" alt=""></a>
+                    <span class="menu-item-name"> Ghế ngồi </span>
+                </div>
+                <div class="menu-item">
+                    <a href="../sp/sp-ban-wrap.html"><img class="menu-item-img" src="https://theme.hstatic.net/1000341603/1000435197/14/collection_4.png?v=602" alt=""></a>
+                    <span class="menu-item-name">Bàn</span>
+                </div>
+                <div class="menu-item">
+                    <a href="../sp/sp-sofa-wrap.html"><img class="menu-item-img" src="https://theme.hstatic.net/1000341603/1000435197/14/collection_5.png?v=602" alt=""></a>
+                    <span class="menu-item-name">Ghế Sofa</span>
+                </div>
+                <div class="menu-item">
+                    <a href="../sp/sp-bantra-wrap.html"><img class="menu-item-img" src="https://theme.hstatic.net/1000341603/1000435197/14/collection_6.png?v=602" alt=""></a>
+                    <span class="menu-item-name">Bàn trà</span>
+                </div>
+            </div>
+
+            <div class="loai-san-pham-wrap">
+                <div class="title-wrap">
+                    <div class="title">GHẾ NGỒI</div>
+                </div>
+                <div class="btn-see-all-wrap">
+                    <button class="btn-see-all"><a href="../sp/sp-ghe-wrap.html"> TẤT CẢ </a></button>
+                </div>
+                <div class="ds-san-pham">
+                    <div class="san-pham">
+                        <a href="../../ghengoi/ghe bunny nhua duc.html"><img src="https://product.hstatic.net/1000341603/product/ghe-cafe-nhua-duc-bunny-ghi_5fb3f98085044a1abba16273ff728558_master.jpg" alt=""></a>
+                        <a href="../../ghengoi/ghe bunny nhua duc.html"><span class="san-pham-name">Ghế Bunny nhựa đúc E28</span></a>
+                        <span class="san-pham-gia">790,000₫</span>
+                    </div>
+                    <div class="san-pham">
+                        <a href="../../ghengoi/ghe nhua duc HOL.html"><img src="data:image/jpeg;base64,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"
+                                alt=""></a>
+                        <a href="../../ghengoi/ghe nhua duc HOL.html"><span class="san-pham-name"> Ghế nhựa đúc lỗ HOL SANKYO E18</span></a>
+                        <span class="san-pham-gia">650,000₫</span>
+                    </div>
+                    <div class="san-pham">
+                        <a href="../../ghengoi/ghe dep cafe G6.html"><img src="https://product.hstatic.net/1000341603/product/ghe_cafe_kennedy_go_soi_cao_cap_9aa02ff482fc422ab8c831f275b5381d_master.jpg" alt=""></a>
+                        <a href="../../ghengoi/ghe dep cafe G6.html"><span class="san-pham-name">Ghế cafe đẹp G6 - Ghế gỗ tự nhiên nệm ngồi (KENNEDY)</span></a>
+                        <span class="san-pham-gia">2,050,000₫ </span>
+                    </div>
+                    <div class="san-pham">
+                        <a href="../../ghengoi/ghe cafe neslon boc da.html"><img src="https://product.hstatic.net/1000341603/product/ghe-an-cafe-nelson-boc-da-chan-sat-nhap-khau-1_e6cd36123c51462db759a52f193cdfdf_master.jpg" alt=""></a>
+                        <a href="../../ghengoi/ghe cafe neslon boc da.html"><span class="san-pham-name">Ghế ăn cafe NELSON bọc da chân sắt</span></a>
+                        <span class="san-pham-gia">1,350,000₫</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loai-san-pham-wrap">
+                <div class="title-wrap">
+                    <div class="title">BÀN</div>
+                </div>
+                <div class="btn-see-all-wrap">
+                    <button class="btn-see-all"><a href="../sp/sp-ban-wrap.html"> TẤT CẢ</a></button>
+                </div>
+                <div class="ds-san-pham">
+                    <div class="san-pham">
+                        <a href="../../ban/Bàn ăn SKORPIO.html"><img src="https://product.hstatic.net/1000341603/product/ban-an-skorpio-mat-da-den-chan-thep-1_70c93027c7f648e4b383fdfa95aa4b86_master.jpg   " alt=""></a>
+                        <a href="../../ban/Bàn ăn SKORPIO.html"><span class="san-pham-name">BA9 - Bàn ăn SKORPIO mặt đá chân thép W</span></a>
+                        <span class="san-pham-gia">10,700,000₫</span>
+                    </div>
+                    <div class="san-pham">
+                        <a href="../../ban/Bàn ăn gỗ Cabin.html"><img src="https://product.hstatic.net/1000341603/product/ban_an_go_cabin_ec17e8305e3645aca4bee26226ee98b6_master.jpg" alt=""></a>
+                        <a href="../../ban/Bàn ăn gỗ Cabin.html"><span class="san-pham-name">BA5 - Bàn ăn gỗ CABIN</span></a>
+                        <span class="san-pham-gia">1,190,000₫</span>
+                    </div>
+                    <div class="san-pham">
+                        <a href="../../ban/Bàn ăn gỗ Kudo.html"><img src="https://product.hstatic.net/1000341603/product/ban_an_go_kudo_obama_bb90cd14452c44deb4c44ce038103e05_master.jpg" alt=""></a>
+                        <a href="../../ban/Bàn ăn gỗ Kudo.html"><span class="san-pham-name">BAG6 - Bàn ăn gỗ KUDO OBAMA</span></a>
+                        <span class="san-pham-gia">1,490,000₫</span>
+                    </div>
+                    <div class="san-pham">
+                        <a href="../../ban/Bàn ăn chữ nhật Eames.html"><img src="https://product.hstatic.net/1000341603/product/ban_an_ban_chu_nhat_eames_1m2_trang_0f37e565be614e7884aef7470c642a26.jpg" alt=""></a>
+                        <a href="../../ban/Bàn ăn chữ nhật Eames.html"><span class="san-pham-name">BE7 - Bàn chữ nhật Eames 1m2</span></a>
+                        <span class="san-pham-gia">1,750,000₫</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loai-san-pham-wrap">
+                <div class="title-wrap">
+                    <div class="title">GHẾ SOFA</div>
+                </div>
+                <div class="btn-see-all-wrap">
+                    <button class="btn-see-all"><a href="../sp/sp-sofa-wrap.html"> TẤT CẢ</a></button>
+                </div>
+                <div class="ds-san-pham">
+                    <div class="san-pham">
+                        <a href="../../ghesofa/sofa Rustic nan gỗ.html"><img src="https://product.hstatic.net/1000341603/product/sofa_fly_vang_dai_1_70507cca1b214937bd187fb1b7f9c6c6_master.jpg" alt=""></a>
+                        <a href="../../ghesofa/sofa Rustic nan gỗ.html"><span class="san-pham-name">S2 - Sofa RUSTIC nan gỗ FLY</span></a>
+                        <span class="san-pham-gia">11,000,000₫</span>
+                    </div>
+                    <div class="san-pham">
+                        <a href="../../ghesofa/SOFA ALGARD.html"><img src="https://product.hstatic.net/1000341603/product/sofa_2_master.jpg" alt=""></a>
+                        <a href="../../ghesofa/SOFA ALGARD.html"><span class="san-pham-name">SOFA ALGARD (văng nỉ)</span></a>
+                        <span class="san-pham-gia">7,200,000₫</span>
+                    </div>
+                    <div class="san-pham">
+                        <a href="../../ghesofa/Sofa FLY RUSTIC.html"><img src="https://product.hstatic.net/1000341603/product/sofa_fly_don_1_31b547718fed496fb16414a47c411a17_master.jpg" alt=""></a>
+                        <a href="../../ghesofa/Sofa FLY RUSTIC.html"><span class="san-pham-name">SD2 - Sofa đơn nan gỗ Fly</span></a>
+                        <span class="san-pham-gia">6,500,000₫</span>
+                    </div>
+                    <div class="san-pham">
+                        <a href="../../ghesofa/Sofa Dedar KBH.html"><img src="https://product.hstatic.net/1000341603/product/sofa_dedar_kbh_nan_lung_con_tien_go_0414a88e90504322865fa5dbad1715c2_master.jpg" alt=""></a>
+                        <a href="../../ghesofa/Sofa Dedar KBH.html"><span class="san-pham-name">S3 - Sofa Dedar KBH - Sofa xuất khẩu</span></a>
+                        <span class="san-pham-gia">11,000,000₫</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loai-san-pham-wrap">
+                <div class="title-wrap">
+                    <div class="title">BÀN TRÀ</div>
+                </div>
+                <div class="btn-see-all-wrap">
+                    <button class="btn-see-all"><a href="../sp/sp-bantra-wrap.html"> TẤT CẢ</a></button>
+                </div>
+                <div class="ds-san-pham">
+                    <div class="san-pham">
+                        <a href="../../bantra/Bàn trà đôi mặt đá tròn.html"><img src="https://product.hstatic.net/1000341603/product/ban_tra_doi_mat_da_den_khung_trang_973e498dea1649beadaddd0443b406ff_master.jpg" alt=""></a>
+                        <a href="../../bantra/Bàn trà đôi mặt đá tròn.html"><span class="san-pham-name">BT4 - Bàn trà đôi mặt đá tròn</span></a>
+                        <span class="san-pham-gia">2,190,000₫</span>
+                    </div>
+                    <div class="san-pham">
+                        <a href="../../bantra/Bàn trà gỗ tròn xoay.html"><img src="https://product.hstatic.net/1000341603/product/ban-tra-tron-xoay-turning-table-6_a9f6845ccec84dc98f052b9e1b867c9d_master.jpg" alt=""></a>
+                        <a href="../../bantra/Bàn trà gỗ tròn xoay.html"><span class="san-pham-name">Bàn trà gỗ tròn xoay TURNING TABLE</span></a>
+                        <span class="san-pham-gia">4,200,000₫</span>
+                    </div>
+                    <div class="san-pham">
+                        <a href="../../bantra/Bàn trà lồng chim.html"><img src="https://product.hstatic.net/1000341603/product/ban_tra_kinh_tron_long_chim_den_ea25de25e2634f418eed7f67c16d5e37_master.jpg" alt=""></a>
+                        <a href="../../bantra/Bàn trà lồng chim.html"><span class="san-pham-name">BT6 - Bàn trà lồng chim</span></a>
+                        <span class="san-pham-gia">1,390,000₫</span>
+                    </div>
+                    <div class="san-pham">
+                        <a href="../../bantra/Bàn táp sofa đa giác.html"><img src="https://product.hstatic.net/1000341603/product/ovo-table-ban-tap-tron-sofa-da-tu-nhien-cao-cap-7_d10351c3fe5841f89f9371067a0724c8.jpg" alt=""></a>
+                        <a href="../../bantra/Bàn táp sofa đa giác.html"><span class="san-pham-name">OVO table - Bàn táp sofa đa giác đế đá tự nhiên</span></a>
+                        <span class="san-pham-gia">5,400,000₫</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-top">
+            <div class="content-item">
+                <div class="combo1">
+                    <div class="img"><img src="https://theme.hstatic.net/1000341603/1000435197/14/policy_icon_1.png?v=542" height="50px" width="50px"></div>
+                    <div class="wrap-content">
+                        <div class="content1">
+                            <p> CHẤT LƯỢNG ĐẢM BẢO</p>
+                            <div class="content2">
+                                <p> Top thương hiệu uy tín</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="combo1">
+                    <div class="img"><img src="https://theme.hstatic.net/1000341603/1000435197/14/policy_icon_2.png?v=600" height="50px" width="50px"></div>
+                    <div class="wrap-content">
+                        <div class="content1">
+                            <p> CHẤT LƯỢNG ĐẢM BẢO</p>
+                            <div class="content2">
+                                <p> Top thương hiệu uy tín</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="combo1">
+                    <div class="img"><img src="https://theme.hstatic.net/1000341603/1000435197/14/policy_icon_3.png?v=600" height="50px" width="50px"></div>
+                    <div class="wrap-content">
+                        <div class="content1">
+                            <p> CHẤT LƯỢNG ĐẢM BẢO</p>
+                            <div class="content2">
+                                <p> Top thương hiệu uy tín</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-wrap">
+            <div class="footer-item">
+                <div> THÔNG TIN LIÊN HỆ</div>
+                <div class="is-divider small"></div>
+                <div>Địa chỉ : 235 Hoàng Quốc Việt , Cổ Nhuế 1 , Bắc Từ Liêm , Hà Nội</div>
+                <div>Hotline : 0336571245</div>
+                <div>Email : decor1409@gmail.com</div>
+            </div>
+
+            <div class="footer-item">
+                <div>THÔNG TIN</div>
+                <div class="is-divider small"></div>
+                <div>Tìm kiếm</div>
+                <div>Giới thiệu</div>
+                <div>Chính sách thanh toán</div>
+                <div>Chính sách vận chuyển</div>
+                <div>Chính sách bảo hành</div>
+            </div>
+
+            <div class="footer-item">
+                <div>LIÊN KẾT</div>
+                <div class="is-divider small"></div>
+                <div>Sản phẩm khuyến mãi</div>
+                <div>Sản phẩm nổi bật</div>
+                <div>Tất cả sản phẩm</div>
+
+            </div>
+
+            <div class="footer-item">
+                <div>KẾT NỐI VỚI CHÚNG TÔI</div>
+                <div class="is-divider small"></div>
+            </div>
+        </div>
+    </div>
+    <div class="design">
+        <div> Copyright 2020 © DECOR . Design by Huong </div>
+    </div>
+</body>
+
+</html>
