@@ -92,6 +92,12 @@ function addAdminAccordionSidebar() {
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar"></div>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="${BASE_URL_ADMIN_PAGES}admin-product-category">
+            <i class="fas fa-fw fa-layer-group"></i>
+            <span>LOẠI SẢN PHẨM</span></a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar"></div>
+    </li>
     <hr class="sidebar-divider d-none d-md-block">
 
     <div class="text-center d-none d-md-inline">
