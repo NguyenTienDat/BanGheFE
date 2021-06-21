@@ -11,9 +11,9 @@ function login() {
                 localStorage.setItem('USER', JSON.stringify(res.data));
 
                 if (e.data.type == 1) {
-                    redirectPage('../admin/admin.html');
+                    redirectPage('../admin/index.html');
                 } else {
-                    redirectPage('../trangchu/Trangchu.html')
+                    redirectPage('../index.html')
                 }
             }
         });

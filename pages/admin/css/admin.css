@@ -21,7 +21,6 @@ a.card {
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
-    background-color: transparent;
     border: 1px solid transparent;
     font-size: 1rem;
     line-height: 1.5;
@@ -29,4 +28,9 @@ a.card {
     color: #fff;
     background-color: #e74a3b;
     border-color: #e74a3b;
+}
+
+.container-fluid {
+    background: #fff;
+    margin-bottom: 30px;
 }
