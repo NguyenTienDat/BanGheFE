@@ -1,5 +1,6 @@
 // const BASEURL = 'http://localhost/BAN_GHE/BanGheBE/api/';
 const BASEURL = `${window.location.protocol}/${window.location.hostname}/BAN_GHE/BanGheBE/api/`;
+const BASE_URL_PAGES = window.location.origin + '/pages/';
 var TOKEN = '';
 
 const postData = (url, body, params = null, isAuth = true, successCallback, failCallback) => {

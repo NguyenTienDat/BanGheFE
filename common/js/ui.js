@@ -8,6 +8,7 @@ setTimeout(() => {
 function addMenuTop() {
     getProductCategory((productCategory) => {
         let category = '';
+        category += `<li><a class="dropdown-item" href="${BASE_URL_PAGES}product-category">TẤT CẢ</a></li>`;
         for (let i = 0; i < productCategory.length; i++) {
             const element = productCategory[i];
             category += `<li><a class="dropdown-item" href="${BASE_URL_PAGES}product-category/index.html?productCategory=${element.id}&name=${element.name}">${element.name}</a></li>`;
@@ -28,7 +29,7 @@ function addMenuTop() {
                 <li class="nav-item active"> <a class="nav-link" href="${BASE_URL_PAGES}index.html">TRANG CHỦ </a> </li>
                 <li class="nav-item"><a class="nav-link" href="${BASE_URL_PAGES}about"> GIỚI THIỆU </a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  SẢN PHẨM  </a>
+                    <a class="nav-link  dropdown-toggle" href="${BASE_URL_PAGES}product-category" data-toggle="dropdown">SẢN PHẨM</a>
                     <ul class="dropdown-menu fade-up" id="product-category"></ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="${BASE_URL_PAGES}contact"> LIÊN HỆ </a></li>

@@ -1,11 +1,17 @@
 $(function() {
-    const type = getQueryParamsURL('productCategory');
-    const name = getQueryParamsURL('name');
+    const type = getQueryParamsURL('productCategory') || -1;
+    const name = getQueryParamsURL('name') || 'Tất Cả';
     $('#product-category-title').html(name);
     getData('product', null, true, e => {
         if (e && e.data && e.data.length > 0) {
             let ls = '';
-            const listItem = e.data.filter(function(item) { return item.category == type });
+            listItem = [];
+            if (type == -1) {
+                listItem = e.data;
+            } else {
+                listItem = e.data.filter(function(item) { return item.category == type });
+            }
+            
             for (let index = 0; index < listItem.length; index++) {
                 const item = listItem[index];
                 if (index == 0 || index % 4 == 0) {

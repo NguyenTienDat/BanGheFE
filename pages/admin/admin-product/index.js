@@ -13,6 +13,7 @@ function getProduct() {
                 <td class="pt-3-half product-image" contenteditable="true"><image width="50" src="${sanpham.image}" /> ${sanpham.image}</td>
                 <td class="pt-3-half product-name" contenteditable="true">${sanpham.name}</td>
                 <td class="pt-3-half product-price" contenteditable="true">${sanpham.price}₫</td>
+                <td class="pt-3-half product-category" contenteditable="true">${sanpham.category}</td>
                 <td class="pt-3-half product-size" contenteditable="true">${sanpham.size}</td>
                 <td class="pt-3-half product-weight" contenteditable="true">${sanpham.weight}</td>
                 <td class="pt-3-half product-color" contenteditable="true">${sanpham.color}</td>
@@ -39,8 +40,7 @@ function deleteProduct(id) {
         delteData('product', { id: id }, true, (e) => {
             console.log(e);
             getProduct();
-
-
+            alert('Xóa thành công!');
         }, (req) => {
 
             console.log(req);
@@ -53,12 +53,11 @@ function updateProduct(id, isAddNew = false) {
     const productimage = $(`#product-id${id}`).find('.product-image').text();
     const productname = $(`#product-id${id}`).find('.product-name').text();
     const productprice = $(`#product-id${id}`).find('.product-price').text();
+    const productCategory = $(`#product-id${id}`).find('.product-category').text();
     const productsize = $(`#product-id${id}`).find('.product-size').text();
     const productweight = $(`#product-id${id}`).find('.product-weight').text();
     const productcolor = $(`#product-id${id}`).find('.product-color').text();
     const productdescription = $(`#product-id${id}`).find('.product-description').text();
-
-
 
     const body = {
         name: productname,
@@ -68,6 +67,7 @@ function updateProduct(id, isAddNew = false) {
         color: productcolor,
         description: productdescription,
         image: productimage,
+        category: productCategory
     };
 
     if (isAddNew) {
@@ -75,7 +75,7 @@ function updateProduct(id, isAddNew = false) {
         postData('product/index.php', body, null, true, (e) => {
             console.log(e);
             getProduct();
-
+            alert('Thêm thành công!');
         }, (req) => {
 
             console.log(req);
@@ -85,7 +85,7 @@ function updateProduct(id, isAddNew = false) {
         putData('product/index.php', body, { id: id }, true, (e) => {
             console.log(e);
             getProduct();
-
+            alert('Sửa thành công!');
         }, (req) => {
 
             console.log(req);
@@ -102,6 +102,7 @@ function addNew() {
             <td class="pt-3-half product-image" contenteditable="true"></td>
             <td class="pt-3-half product-name" contenteditable="true"></td>
             <td class="pt-3-half product-price" contenteditable="true"></td>
+            <td class="pt-3-half product-category" contenteditable="true"></td>
             <td class="pt-3-half product-size" contenteditable="true"></td>
             <td class="pt-3-half product-weight" contenteditable="true"></td>
             <td class="pt-3-half product-color" contenteditable="true"></td>

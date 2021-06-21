@@ -1,5 +1,4 @@
 const BASE_URL_ADMIN_PAGES = window.location.origin + '/pages/admin/';
-const BASE_URL_PAGES = window.location.origin + '/pages/';
 
 setTimeout(() => {
     addAdminAccordionSidebar();
