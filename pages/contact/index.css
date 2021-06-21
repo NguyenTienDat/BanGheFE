@@ -1,0 +1,78 @@
+ /* ================================================== */
+ 
+ .main-wrap {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .main {
+     width: 1000px;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .main .thongtin-img {
+     text-align: center;
+     padding-bottom: 50px;
+ }
+ 
+ .main .contact {
+     padding-top: 50px;
+ }
+ 
+ .main .contact .nd {
+     font-size: 15px;
+ }
+ 
+ .main .contact .diachi {
+     font-size: 15px;
+     font-weight: bold;
+ }
+ 
+ .main .contact .gach {
+     border-bottom: 1px solid #ddd;
+     position: relative;
+     padding-bottom: 10px;
+ }
+ 
+ .main .contact .text {
+     padding-top: 10px;
+     font-size: 15px;
+     width: 1000px;
+     outline: none;
+ }
+ 
+ .btn-send {
+     background: #874546;
+     color: #d6d6d8;
+     font-size: 16px;
+     text-transform: uppercase;
+     padding: 10px 30px 5px;
+     border: 1px solid #d6d6d8;
+     border-radius: 25px;
+     margin-bottom: 40px;
+     margin-top: 20px;
+     font-weight: bold;
+ }
+ 
+ .btn-send:hover {
+     background: none;
+     color: black;
+ }
+ 
+ .btn-send a {
+     text-decoration: none;
+     color: #d6d6d8;
+     font-weight: bold;
+     font-size: 16px;
+ }
+ 
+ .btn-send a:hover {
+     color: #fff;
+     text-decoration: none;
+     color: #d6d6d8;
+     font-weight: bold;
+     font-size: 16px;
+ }

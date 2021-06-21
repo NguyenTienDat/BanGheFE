@@ -1,0 +1,91 @@
+  /* ===================================================== */
+  
+  .wrap-main {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .main {
+      width: 1000px;
+  }
+  /* ===================================================== */
+  
+  .wrap-main {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .main {
+      width: 1000px;
+  }
+  
+  .ds-san-pham {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 50px;
+      padding-bottom: 50px;
+  }
+  
+  .ds-san-pham .san-pham {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 208px;
+      text-align: center;
+  }
+  
+  .ds-san-pham .san-pham a {
+      color: black;
+  }
+  
+  .ds-san-pham .san-pham img {
+      width: 100%;
+  }
+  
+  .ds-san-pham .san-pham .san-pham-name {
+      font-size: 15px;
+      font-weight: 400;
+      text-transform: uppercase;
+      padding: 10px;
+  }
+  
+  .ds-san-pham .san-pham-gia {
+      font-weight: 700;
+      color: #874546;
+      font-size: 18px;
+  }
+  
+  .main .text {
+      font-size: 20px;
+      font-weight: bold;
+      padding-top: 50px;
+      text-align: center;
+  }
+  
+  .title-wrap {
+      border-bottom: 2px solid #ddd;
+      position: relative;
+      margin-top: 100px;
+  }
+  
+  .title {
+      position: absolute;
+      font-size: 25px;
+      font-weight: normal;
+      text-transform: uppercase;
+      text-align: center;
+      background: #fff;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0 50px;
+  }
+  
+  .main .gach {
+      border: 1px solid #d6d6d8;
+      margin-bottom: 50px;
+  }

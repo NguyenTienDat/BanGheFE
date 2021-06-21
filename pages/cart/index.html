@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Đăng nhập</title>
-    <link rel="stylesheet" href="Dangnhap.css">
-    <meta http-equiv="refresh" content="10000">
+    <title>Gio hang</title>
+    <link rel="stylesheet" href="index.css">
+    <meta http-equiv="refresh" content="100000">
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,11 +13,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../../js/apis.js" type="text/javascript"></script>
-    <script src="../../js/support.js" type="text/javascript"></script>
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="../../common/css/common.css">
+    <script src="../../common/js/apis.js"></script>
+    <script src="../../common/js/support.js"></script>
+    <script src="./index.js"></script>
     <style>
         /* Make the image fully responsive */
         
@@ -60,44 +61,47 @@
 
 <body>
     <div class="menutop">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="padding-left: 370px;">
-            <a class="navbar-brand" href="#">Brand</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="main_nav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active"> <a class="nav-link" href="../trangchu/Trangchu.html">TRANG CHỦ </a> </li>
-                    <li class="nav-item"><a class="nav-link" href="../gioithieu/Gioithieu.html"> GIỚI THIỆU </a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  SẢN PHẨM  </a>
-                        <ul class="dropdown-menu fade-up">
-                            <li><a class="dropdown-item" href="../sp/sp-ghe-wrap.html"> GHẾ NGỒI </a></li>
-                            <li><a class="dropdown-item" href="../sp/sp-ban-wrap.html"> BÀN </a></li>
-                            <li><a class="dropdown-item" href="../sp/sp-sofa-wrap.html"> GHẾ SOFA </a></li>
-                            <li><a class="dropdown-item" href="../sp/sp-bantra-wrap.html"> BÀN TRÀ </a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="../lienhe/Lienhe.html"> LIÊN HỆ </a></li>
-                    <li class="nav-item"><a class="nav-link" href="../blog/Blog.html"> BLOG </a></li>
-                </ul>
+        <div class="menutop">
+            <nav class="navbar navbar-expand-lg navbar-dark" style="padding-left: 370px;">
+                <a class="navbar-brand" href="#">Brand</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="main_nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active"> <a class="nav-link" href="../trangchu/Trangchu.html">TRANG CHỦ </a> </li>
+                        <li class="nav-item"><a class="nav-link" href="../gioithieu/Gioithieu.html"> GIỚI THIỆU </a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  SẢN PHẨM  </a>
+                            <ul class="dropdown-menu fade-up">
+                                <li><a class="dropdown-item" href="../sp/sp-ghe-wrap.html"> GHẾ NGỒI </a></li>
+                                <li><a class="dropdown-item" href="../sp/sp-ban-wrap.html"> BÀN </a></li>
+                                <li><a class="dropdown-item" href="../sp/sp-sofa-wrap.html"> GHẾ SOFA </a></li>
+                                <li><a class="dropdown-item" href="../sp/sp-bantra-wrap.html"> BÀN TRÀ </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../lienhe/Lienhe.html"> LIÊN HỆ </a></li>
+                        <li class="nav-item"><a class="nav-link" href="../blog/Blog.html"> BLOG </a></li>
+                    </ul>
 
-            </div>
-        </nav>
-        <div class="input-group">
-            <input type="text" value="" placeholder="Tìm kiếm..." name="q">
-            <input type="hidden" value="product" name="type">
-            <span class="input-group-btn">
+                </div>
+            </nav>
+
+            <div class="input-group">
+                <input type="text" value="" placeholder="Tìm kiếm..." name="q">
+                <input type="hidden" value="product" name="type">
+                <span class="input-group-btn">
                 <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
             </span>
+            </div>
+            <div class="dang-nhap">
+                <a href="../Dangnhap/Dangnhap.html" target="_parent"><img src="https://cdn.onlinewebfonts.com/svg/img_568657.png"></a>
+            </div>
+            <div class="index">
+                <a href="index.html" target="_parent"><img src="https://previews.123rf.com/images/val2014/val20141603/val2014160300005/54302312-shopping-cart-icon.jpg" alt="Giỏ hàng"></a>
+            </div>
+            <div class="logout"><button onclick="logout('../Dangnhap/Dangnhap.html')">Logout</button></div>
         </div>
-        <div class="dang-nhap">
-            <a href="Dangnhap.html"><img src="https://cdn.onlinewebfonts.com/svg/img_568657.png"></a>
-        </div>
-        <div class="giohang">
-            <a href="../giohang/Giohang.html" target=""><img src="https://previews.123rf.com/images/val2014/val20141603/val2014160300005/54302312-shopping-cart-icon.jpg" alt="Giỏ hàng"></a>
-        </div>
-        <div class="username" id=""></div>
     </div>
     <div class="banner">
 
@@ -135,19 +139,40 @@
     </div>
     <div class="main-wrap">
         <div class="main">
-            <p class="tittle"> ĐĂNG NHẬP </p>
-            <div>
-                <p><input class="text" type="text" placeholder="Tên đăng nhập" required id="username"></p>
+            <div class="donhang">
+                <div class="tittle">ĐƠN HÀNG CỦA BẠN</div>
+                <div class="ten">
+                    <div class="text1">Tên sản phẩm</div>
+                    <div class="text2">Số lượng</div>
+                    <div class="text1">Giá</div>
+                </div>
+                <div class="gach"></div>
 
-                <p><input class="text" type="text" placeholder="Mật khẩu" required id="pass"></p>
+                <!-- ================================= -->
+                <div id="cart-list"></div>
 
-                <p><button class="btn-send" onclick="login()">ĐĂNG NHẬP</button></p>
+                <!-- <div class="gach"></div> -->
+                <!-- <div class="tam-tinh">
+                    <div class="text4">TẠM TÍNH :</div>
+                    <div class="text3" id="tam-tinh-tien">0</div>
+                </div>
+                <div class="tam-tinh">
+                    <div class="text4">PHÍ SHIP :</div>
+                    <div class="text3">50,000 đ</div>
+                </div> -->
+                <div class="gach"></div>
+                <div class="tam-tinh">
+                    <div class="text4">TỔNG TIỀN :</div>
+                    <div class="text3" id="tong-tien">0</div>
+                </div>
+                <div class="button">
+                    <p><button class="btn-send" type="submit"><a href="../trangchu/Trangchu.html"> Tiếp tục mua hàng </a></button></p>
+                    <p><button class="btn-send" type="submit"><a href="../thanhtoan/Thanhtoan.html"> Thanh toán</a></button></p>
+                </div>
             </div>
-            <div class="dangki"><a href="../Dangki/Dangki.html"> ĐĂNG KÍ </a</div>
-            <div class="dangki"><a href="../trangchu/Trangchu.html"> Trở về</a</div>
-        </div>  
+        </div>
     </div>
-     <div class="footer">
+    <div class="footer">
         <div class="footer-wrap">
             <div class="footer-item">
                 <div> THÔNG TIN LIÊN HỆ</div>
@@ -186,5 +211,5 @@
         <div> Copyright 2020 © DECOR . Design by Huong </div>
     </div>
 </body>
-<script src="./dangnhap.js"></script>
+
 </html>

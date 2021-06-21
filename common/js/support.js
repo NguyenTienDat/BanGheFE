@@ -51,3 +51,12 @@ function logout(page) {
     localStorage.clear();
     redirectPage(page);
 }
+
+function getProductCategory(callbabck) {
+    getData(`product-category/index.php`, null, true, (e) => {
+        callbabck(e && e.data)
+    }, (req) => {
+        alert("ERROR! product-category/index.php");
+        callbabck(req)
+    });
+}
