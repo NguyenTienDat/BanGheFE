@@ -45,12 +45,12 @@ function renderList(list) {
             </td>
             <td>
                 <font style="vertical-align: inherit;">
-                    <font style="vertical-align: inherit;">${item.Tongtien}</font>
+                    <font style="vertical-align: inherit;">${item.Ngay}</font>
                 </font>
             </td>
             <td>
                 <font style="vertical-align: inherit;">
-                    <font style="vertical-align: inherit;">${item.Ngay}</font>
+                    <font style="vertical-align: inherit;">${item.Tongtien}</font>
                 </font>
             </td>
 
@@ -161,6 +161,13 @@ function addPagination(list) {
     </li>`;
 
     $('#pagination-ul').html(html);
+}
+
+function resetDate() {
+    $('#from-date').val('');
+    $('#to-date').val('');
+    $('#search-input').val('');
+    filter();
 }
 
 function changeSize(pageIndex) {
