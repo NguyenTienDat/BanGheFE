@@ -1,4 +1,4 @@
-const BASEURL = 'http://localhost:7070/indieteq-php-my-sql-pdo-database-class/api/';
+const BASEURL = 'http://127.0.0.1/BAN_GHE/BanGheBE/api/';
 var TOKEN = '';
 
 const postData = (url, body, params = null, isAuth = true, successCallback, failCallback) => {

@@ -52,11 +52,19 @@ function logout(page) {
     redirectPage(page);
 }
 
-function getProductCategory(callbabck) {
+function getProductCategory(callback) {
     getData(`product-category/index.php`, null, true, (e) => {
-        callbabck(e && e.data)
+        callback(e && e.data)
     }, (req) => {
         alert("ERROR! product-category/index.php");
-        callbabck(req)
+        callback(req)
     });
+}
+
+function getQueryParamsURL(name) {
+    return (new URL(window.location.href)).searchParams.get(name);
+}
+
+function goBack() {
+    window.history.back();
 }

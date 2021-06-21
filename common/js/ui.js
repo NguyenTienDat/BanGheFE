@@ -10,7 +10,7 @@ function addMenuTop() {
         let category = '';
         for (let i = 0; i < productCategory.length; i++) {
             const element = productCategory[i];
-            category += `<li><a class="dropdown-item" href="${BASE_URL_PAGES}product-category/index.html?productCategory=${element.id}">${element.name}</a></li>`;
+            category += `<li><a class="dropdown-item" href="${BASE_URL_PAGES}product-category/index.html?productCategory=${element.id}&name=${element.name}">${element.name}</a></li>`;
         }
 
         $('#product-category').html(category);

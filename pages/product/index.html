@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SẢN PHẨM</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../common/css/common.css">
+
+    <script src="../../common/js/ui.js" type="text/javascript"></script>
+    <script src="../../common/js/apis.js"></script>
+    <script src="../../common/js/support.js"></script>
+
+    <script src="../cart/index.js"></script>
+
+    <script src="./index.js"></script>
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    
+    <div id="header-wrap">
+        <div class="menutop" id="menutop"></div>
+        <div class="banner" id="banner"></div>
+    </div>
+
+    <div class="main-wrap">
+        <div class="main">
+            <div class="dathang">
+                <div class="dathang-img">
+                    <img id="img-src" src="https://product.hstatic.net/1000341603/product/ghe-cafe-nhua-duc-bunny-ghi_5fb3f98085044a1abba16273ff728558_master.jpg" alt="">
+                </div>
+                <div class="thongtin-sp">
+                    <p class="tittle" id="label-name"></p>
+                    <p class="gia" id="label-gia"></p>
+                    <div>
+                        <div class="gach1"></div>
+                    </div>
+                    <p class="text"><span> Chi tiết sản phẩm: </p>
+                    <p class="text"><i id="label-size"></i></p>
+                    <p class="text"><i id="label-color"></i></p>
+                    <p class="text"><i id="label-weight"></i></p>
+                    
+                    <div><div class="gach2"></div></div>
+                    <div class="muahang-wrap">
+                        SỐ LƯỢNG 
+                        <div class="soluong-btn">
+                            <button type="button" class="giamsl" onclick="updatedUIChangeQuantity('#input-quantity', -1)">-</button>
+                            <input type="text" id="input-quantity" value="1" min="1" data-id="Quantity" aria-label="quantity" pattern="[0-9]*" name="quantity" id="Quantity">
+                            <button type="button" class="tangsl" onclick="updatedUIChangeQuantity('#input-quantity', 1)">+</button>
+                        </div>
+                        <div class="shopping-btn"><span class="cursor-pointer" onclick="addToCart()"><i class="fa fa-shopping-cart"></i></span></div>
+                <button class="btn-buynow" onclick="addToCart(true)"> MUA NGAY</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="main-mota-wrap">
+        <div class="mota">
+            <p class="mota-tittle"><span> MÔ TẢ </span></p>
+            <div>
+                <div class="gach"></div>
+            </div>
+            <p class="mota-tittle" id="label-name-des"><span></span></p>
+            <p class="text" id="label-des"></p>
+
+            <div>
+                <div class="gach3"></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer-wrap">
+        <div class="content" id="footer-baner"></div>
+        <div class="footer" id="footer"></div>
+        <div class="design" id="design"></div>
+    </div>
+</body>
+
+</html>
