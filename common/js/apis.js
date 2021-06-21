@@ -1,4 +1,5 @@
-const BASEURL = 'http://127.0.0.1/BAN_GHE/BanGheBE/api/';
+// const BASEURL = 'http://localhost/BAN_GHE/BanGheBE/api/';
+const BASEURL = `${window.location.protocol}/${window.location.hostname}/BAN_GHE/BanGheBE/api/`;
 var TOKEN = '';
 
 const postData = (url, body, params = null, isAuth = true, successCallback, failCallback) => {
