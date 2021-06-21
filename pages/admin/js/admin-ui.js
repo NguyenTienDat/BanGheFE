@@ -43,7 +43,7 @@ function addAdminTopNav() {
                 <a class="dropdown-item" href="#">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i><span id="usernameLabel"></span> 
                 </a>
-                <a class="dropdown-item" href="${BASE_URL_ADMIN_PAGES}index.html">
+                <a class="dropdown-item" href="${BASE_URL_PAGES}index.html">
                     <i class="fas fa-home fa-sm fa-fw mr-2 text-gray-400"></i> Trang chủ
                 </a>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
