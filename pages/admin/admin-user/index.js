@@ -37,7 +37,7 @@ function getUserOnAdmin() {
 function deleteUser(username) {
     const confirmDe = confirm('Bạn có thực sự muốn xóa người dùng này?');
     if (confirmDe) {
-        delteData('User', { username: username }, true, (e) => {
+        delteData('user', { username: username }, true, (e) => {
             console.log(e);
             getUserOnAdmin();
             alert('Xóa thành công!');
@@ -72,7 +72,7 @@ function updateUser(username, isAddNew = false) {
 
     if (isAddNew) {
         console.log(body)
-        postData('User/index.php', body, null, true, (e) => {
+        postData('user/index.php', body, null, true, (e) => {
             console.log(e);
             getUserOnAdmin();
             alert('Thêm thành công!');
@@ -82,7 +82,7 @@ function updateUser(username, isAddNew = false) {
             // alert(req.responseJSON.message);
         });
     } else {
-        putData('User/index.php', body, { id_ref: username }, true, (e) => {
+        putData('user/index.php', body, { id_ref: username }, true, (e) => {
             console.log(e);
             getUserOnAdmin();
             alert('Update thành công!');
