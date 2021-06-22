@@ -66,7 +66,7 @@ function thanhToan() {
                 if (e && e.message == 'success') {
                     console.log(e, ' clear card');
                     alert('Tạo đơn hàng thành công!. Mời bạn xem các sản phẩm khác.');
-                    redirectPage('../trangchu/Trangchu.html');
+                    redirectPage('../index.html');
                 }
             }, (req) => {
                 if (failCallBack) { failCallBack(); }

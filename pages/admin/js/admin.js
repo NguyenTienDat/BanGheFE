@@ -11,10 +11,8 @@ function getBill(from, to) {
         params.to = to;
     }
     getData(`bill/index.php`, params, true, (e) => {
-
         if (e && e.message == 'success') {
             $('#count-bill').html(e.data.length);
-
             console.log(e);
             LIST = JSON.parse(JSON.stringify(e.data));
             renderList(e.data);
@@ -29,10 +27,10 @@ function renderList(list) {
     let doanhThu = 0;
     for (let i = 0; i < list.length; i++) {
         const item = list[i];
-        doanhThu += item.Tongtien || 0;
+        doanhThu += +item.Tongtien || 0;
         ls += `
         
-        <tr role="row" class="odd">
+        <tr id="bill-id${item.id}" role="row" class="odd">
             <td class="sorting_1">
                 <font style="vertical-align: inherit;">
                     <font style="vertical-align: inherit;">${item.name}</font>
@@ -50,10 +48,12 @@ function renderList(list) {
             </td>
             <td>
                 <font style="vertical-align: inherit;">
-                    <font style="vertical-align: inherit;">${item.Tongtien}</font>
+                    <font style="vertical-align: inherit;">${numberWithCommas(item.Tongtien)}</font>
                 </font>
             </td>
-
+            <td style="text-align:center">
+                <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0" onclick="deleteBill(${item.id})">Remove</button></span>
+            </td>
         </tr>
 
         `;
@@ -63,11 +63,25 @@ function renderList(list) {
     // $('#tong-tien').html(numberWithCommas(tamTinh) + 'đ');
 
     $('#bill-list').html(ls);
-    $('#doanhthu-id').html(doanhThu);
+    $('#doanhthu-id').html(numberWithCommas(doanhThu));
 
-    addPagination(list);
+    // addPagination(list);
 }
 
+
+function deleteBill(id) {
+    const confirmDe = confirm('Bạn có thực sự muốn xóa hóa đơn này?');
+    if (confirmDe) {
+        delteData('bill', { id: id }, true, (e) => {
+            console.log(e);
+            getBill();
+            alert('Xóa thành công!');
+        }, (req) => {
+            console.log(req);
+            // alert(req.responseJSON.message);
+        });
+    }
+}
 function changeQuantityCart(input, num, productId) {
     updatedUIChangeQuantity(input, num);
     let username = getUser('username');

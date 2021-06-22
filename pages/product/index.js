@@ -37,7 +37,7 @@ function addToCart(isBuyNow) {
             body.quantity = +(e.data[0].quantity) + quantity;
             putData(`cart/index.php`, body, { id: body.id }, true, (e) => {
                 if (e && e.message == 'success') {
-                    redirectPage(isBuyNow ? '../thanhtoan/Thanhtoan.html' : '../giohang/giohang.html');
+                    redirectPage(isBuyNow ? '../pay' : '../cart');
                 }
             }, (req) => {
                 if (failCallBack) { failCallBack(); }
@@ -45,7 +45,7 @@ function addToCart(isBuyNow) {
         } else { // add
             postData(`cart/index.php`, body, null, true, (e) => {
                 if (e && e.message == 'success') {
-                    redirectPage(isBuyNow ? '../thanhtoan/Thanhtoan.html' : '../giohang/giohang.html');
+                    redirectPage(isBuyNow ? '../pay' : '../cart');
                 }
             }, (req) => {
                 if (failCallBack) { failCallBack(); }

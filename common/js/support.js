@@ -68,3 +68,6 @@ function getQueryParamsURL(name) {
 function goBack() {
     window.history.back();
 }
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
